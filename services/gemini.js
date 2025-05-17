@@ -40,9 +40,7 @@ const generateGeminiCaptionForUI = async (tags = [], memeId) => {
       .slice(0, 3);
     
     const result_obj = {
-      mainCaption: captions[0] || 'Epic meme moment',
-      alternatives: captions.slice(1),
-      hasAlternatives: captions.length > 1
+      mainCaption: captions[0] || 'Epic meme moment'
     };
     
     if (memeId) captionCache[memeId] = result_obj;
@@ -58,4 +56,4 @@ const generateGeminiCaptionForUI = async (tags = [], memeId) => {
   }
 };
 
-export default generateGeminiCaptionForUI;
+export default generateGeminiCaptionForUI;  
